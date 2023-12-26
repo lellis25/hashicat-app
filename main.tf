@@ -206,3 +206,9 @@ resource "azurerm_resource_group" "example" {
   name     = "example-resources"
   location = "East US"
 }
+
+module "azure-backup" {
+  source  = "ravensorb/azure-backup/azurerm"
+  version = "1.0.2"
+  resource_group_name = "${var.prefix}-public"
+}
