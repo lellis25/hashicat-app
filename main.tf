@@ -199,28 +199,8 @@ resource "null_resource" "configure-cat-app" {
       password = var.admin_password
       host     = azurerm_public_ip.catapp-pip.fqdn
     }
-  
-  
-  
-  
-  
-  
-  
-  
-  
   }
-
-
-
-
-
-
-
-
-
 }
-
-
 module "azure-backup" {
   source  = "ravensorb/azure-backup/azurerm"
   version = "1.0.2"
